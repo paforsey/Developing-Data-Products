@@ -9,10 +9,13 @@ shinyUI(fluidPage(
     )),
 
     fluidRow(
-        column(3, div(style="background-color:#87CEFA; border: solid 1px lightgray; border-radius:10px; padding:20px; margin-bottom:15px; margin-top:0px;",
+        column(3, div(style="background-color:#87CEFA; border: solid 1px lightgray; 
+            border-radius:10px; padding:20px; margin-bottom:15px; margin-top:0px;",
             dateInput("FundedDate", "Funded Date:"),
-            numericInput(inputId="LoanAmt",label="Loan Amount:", value=20000, min=0, max=100000, step=250),
-            numericInput(inputId="Wholesale",label="Wholesale Value:", value=16000, min=0, max=100000, step=250),
+            numericInput(inputId="LoanAmt",label="Loan Amount:", value=20000, min=0, 
+                max=100000, step=250),
+            numericInput(inputId="Wholesale",label="Wholesale Value:", value=16000, 
+                min=0, max=100000, step=250),
             checkboxGroupInput("Profile", "Vehicle Profile:",
                 c(
                     "1) Used"=1, 
@@ -21,7 +24,8 @@ shinyUI(fluidPage(
                 )),
             submitButton('Submit')
         ),
-        column(3,div(style="background-color:white; border: solid 1px lightgray; border-radius:10px; padding:5px 15px 5px 15px;",
+        column(3,div(style="background-color:white; border: solid 1px lightgray; 
+            border-radius:10px; padding:5px 15px 5px 15px;",
             h4('Funded Date:'),
                 verbatimTextOutput("odate"),
             h4('Loan Amount:'),
@@ -60,5 +64,4 @@ shinyUI(fluidPage(
     ))
 
 )
-
 
