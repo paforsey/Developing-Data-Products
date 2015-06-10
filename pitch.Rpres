@@ -1,0 +1,49 @@
+---
+title: "Risk Scoring & Segmentation Model"
+output: ioslides_presentation
+---
+
+## Objective
+
+The objective is to devleop a model that calculates a score ranging from 500-900
+that effectively segments loan applicants into three categories of risk based on
+expected losses.
+
+
+## Scoring
+
+The Audit Risk Score is calculated using the following attributes:
+
+- Loan Amount
+- Wholesale Value
+- Vehicle Profile ( New/Used, Vehicle Age, Mileage )
+
+## Segmentation
+
+
+```{r echo=F}
+
+    suppressWarnings(library(ggplot2))
+    dataset <- read.csv("~/Business Analytics/Losses.csv")
+    g <- ggplot(data=dataset, aes(dataset$Score, dataset$Losses))
+    g <- g + geom_point(aes(color=Risk.Group), size=4, alpha=0.50)
+    g <- g + labs(title="Risk Segmentation") + labs(x="Audit Risk Score", y="Losses (%)")
+    g <- g + geom_smooth(size=0.75, linetype=6, col="blue", data=dataset, method="lm", se=F)
+    g <- g + theme_bw()
+    g
+
+    # publish(title='Audit Risk Score', 'AuditRiskScore.html', host='rpubs')
+
+```
+
+
+## Conclusions
+
+All loan applicants with a Audit Risk Score above 700 should be manually audited:
+
+- Audit Risk Score correlates fairly well with Actual Losses.
+- Risk Group A:  500 - 660
+- Risk Group B:  661 - 700
+- Risk Group C:  700+
+
+
