@@ -6,7 +6,7 @@ output: ioslides_presentation
 ## Objective
 
 The objective is to devleop a web based application that calculates a score
-that enables the company to effectively segments loan applicants into three 
+that enables the company to effectively segment loan applicants into three 
 groups of risk based on expected losses.
 
 
