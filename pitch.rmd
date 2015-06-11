@@ -41,8 +41,8 @@ The Audit Risk Score application correlates fairly well with actual losses,
 enabling the company to effectively segment applicants into the following three 
 groups:
 
-- Risk Group A:  500 - 660
-- Risk Group B:  661 - 700
-- Risk Group C:  700+
+- A: Score 500 - 660, Low Risk
+- B: Score 661 - 700, Moderate Risk
+- C: Score 700+, High Risk
 
 
