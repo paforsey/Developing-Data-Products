@@ -1,22 +1,22 @@
 ---
-title: "Risk Scoring & Segmentation Model"
+title: "Audit Risk Score Application"
 output: ioslides_presentation
 ---
 
 ## Objective
 
-The objective is to devleop a model that calculates a score ranging from 500-900
-that effectively segments loan applicants into three categories of risk based on
-expected losses.
+The objective is to devleop a web based application that calculates a score
+that enables the company to effectively segments loan applicants into three 
+groups of risk based on expected losses.
 
 
 ## Scoring
 
-The Audit Risk Score is calculated using the following attributes:
+The Audit Risk Score application leverages the following attributes:
 
 - Loan Amount
 - Wholesale Value
-- Vehicle Profile ( New/Used, Vehicle Age, Mileage )
+- Vehicle Profile ( New/Used, Vehicle Age, & Mileage )
 
 ## Segmentation
 
@@ -37,9 +37,10 @@ The Audit Risk Score is calculated using the following attributes:
 
 ## Conclusions
 
-All loan applicants with a Audit Risk Score above 700 should be manually audited:
+The Audit Risk Score application correlates fairly well with actual losses, 
+enabling the company to effectively segment applicants into the following three 
+groups:
 
-- Audit Risk Score correlates fairly well with Actual Losses.
 - Risk Group A:  500 - 660
 - Risk Group B:  661 - 700
 - Risk Group C:  700+
